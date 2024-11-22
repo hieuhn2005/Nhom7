@@ -2,7 +2,7 @@
     <div class="row">
       <div class="col-3 sidebar">
         <div class="logo">
-          <img src="../img/logo1.png" alt="">
+          <img src="../view/img/logo1.png" alt="">
         </div>
         <nav class="nav flex-column">
             <a class="nav-link" href="index.php?act=addsp"><i class="fas fa-university"></i> Trang chủ</a>
@@ -20,6 +20,22 @@
             <h1>QUẢN LÝ DANH SÁCH SẢN PHẨM</h1><br>
         <a href="index.php?act=lissp"><button>Thêm sản phẩm</button></a>
         </div>
+
+        <form action="index.php?act=addsp" method="post">
+          <input type="text" name="kyw">
+                   <select name="iddm" id="">
+                      <option value="0" selected>Tất cả</option>
+                                <?php
+                                    foreach ($listdanhmuc as $danhmuc) {
+                                        extract($danhmuc);
+                                        echo '<option value="'.$id.'">'.$name.'</option>';
+                                    }
+                                ?>
+                                
+                    </select>
+                    <input type="submit" name="listok" value="Tìm kiếm">
+        </form><br>
+
         <table class="table table-striped">
           <thead>
             <tr>

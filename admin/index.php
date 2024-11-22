@@ -57,7 +57,15 @@
                                  // controller sản phẩm
 
              case 'addsp':
-                $listsanpham=loadall_sanpham();
+                if(isset($_POST['listok'])&&($_POST['listok'])){
+                    $kyw=$_POST['kyw'];
+                    $iddm=$_POST['iddm'];
+                }else{
+                    $kyw='';
+                    $iddm=0;
+                }
+                $listdanhmuc=loadall_danhmuc();
+                $listsanpham=loadall_sanpham($kyw,$iddm);
                 include "sanpham/add.php";
                 break;
 
@@ -66,7 +74,7 @@
                     delete_sanpham($_GET['id']);
                 }
 
-                $listsanpham=loadall_sanpham();
+                $listsanpham=loadall_sanpham("",0);
                 include "sanpham/add.php";
                 break;
 
@@ -96,12 +104,13 @@
                 if(isset($_GET['id'])&&($_GET['id']>0)){
                     $sanpham=loadone_sanpham($_GET['id']);
                 }
-
+                $listdanhmuc=loadall_danhmuc();
                 include "sanpham/update.php";
                 break;
 
             case 'updatesp':
                 if(isset($_POST['capnhap'])&&($_POST['capnhap'])){
+                    $id=$_POST['id'];
                     $iddm=$_POST['iddm'];
                     $tensp=$_POST['tensp'];
                     $giasp=$_POST['giasp'];
@@ -114,12 +123,11 @@
                     } else{
 
                     }
-                    // $tenloai=$_POST['tenloai'];
-                    // $id=$_POST['id'];
-                    update_sanpham($id,$tensp,$img,$price,$mota);
+                    $listdanhmuc=loadall_danhmuc();
+                    update_sanpham($id,$iddm,$tensp,$giasp,$mota,$hinh);
                     $thongbao="Cập nhập Thành công";
                 }
-                $listsanpham=loadall_sanpham();
+                $listsanpham=loadall_sanpham("",0   );
                 include "sanpham/add.php";
                 break;
 

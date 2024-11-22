@@ -2,12 +2,12 @@
     if(is_array($sanpham)){
         extract($sanpham);
     }
-    // $hinhpath="../upload/".$img;
-    // if(is_file($hinhpath)){
-    //   $hinh="<img src='".$hinhpath."' height='80'";
-    // }else{
-    //   $hinh="no photo";
-    // }
+    $hinhpath="../upload/".$img;
+    if(is_file($hinhpath)){
+      $hinh="<img src='".$hinhpath."' height='80'";
+    }else{
+      $hinh="no photo";
+    }
 ?>
 
 <div class="container-fluid">
@@ -34,10 +34,20 @@
         <div class="danhmuc">
         <form action="index.php?act=updatesp" method="post" enctype="multipart/form-data">
                 <div class="mb10">
-                    <!-- Mã Loại: <br>
-                    <input type="text" name="maloai" disabled > -->
-                    <!-- <select name="iddm" id=""></select> -->79
-                </div>
+                     Chọn danh mục:
+                    <select name="iddm" id="">
+                     
+                        <option value="0" selected>Tất cả</option>
+                                    <?php
+                                        foreach ($listdanhmuc as $danhmuc) {
+                                            extract($danhmuc);
+                                            if($iddm==$id) echo '<option value="'.$id.'"selected>'.$name.'</option>';
+                                            else echo '<option value="'.$id.'">'.$name.'</option>';
+                                        }
+                                    ?>
+                                    
+                        </select>
+                </div><br>
                 <div class="mb10">
                     Tên sản phẩm: <br>
                     <input type="text" name="tensp" value="<?= $name ?>" >
