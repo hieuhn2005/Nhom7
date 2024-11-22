@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-3 sidebar">
         <div class="logo">
-          <img src="../img/logo1.png" alt="">
+          <img src="../view/img/logo1.png" alt="">
         </div>
         <nav class="nav flex-column">
             <a class="nav-link" href="index.php?act=addsp"><i class="fas fa-university"></i> Trang chủ</a>
