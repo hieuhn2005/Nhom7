@@ -1,0 +1,307 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img{
+  height: 100px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+}
+nav ul li a:hover {
+  
+  text-decoration: underline;
+  color: rgb(255, 1, 1);
+}
+
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.search button {
+  padding: 8px 12px;
+  background-color: #007a3d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+}
+.nguoi{
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
+}
+.nguoi i{
+  font-size: 30px;
+}
+.giohang{
+  display: flex;
+  align-items: center;
+}
+.giohang i{
+  font-size: 30px;
+}
+
+
+
+.cart {
+  display: flex;
+  align-items: center;
+}
+
+.cart .item-count {
+  background-color: #007a3d;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 50%;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.cart .price {
+  font-weight: bold;
+}
+
+/* Main content styles */
+
+.banner img{
+  width: 100%;
+}
+.productt{
+  width: 85%;
+  margin: auto;
+}
+.productt h1{
+  margin:20px 0;
+}
+.product{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+  padding: 15px;
+  
+}
+.pro-items{
+  height: auto;
+  width: auto;
+  border: 1px solid gray;
+  background: white;
+  
+}
+.product .pro-items img{
+  width: 100%;
+  padding: 0 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.name-pro{
+  text-align: center;
+  
+
+}
+.pro-items p{
+  text-align: center;
+  color: red;
+  font-size: 25px;
+  padding: 0 10px;
+
+}
+.trung{
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  
+}
+
+footer {
+  background-color: #008000;
+  color: #ffffff;
+  padding: 15px 0;
+  font-size: 14px;
+  
+  }
+  
+  .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  }
+  
+  .copyright p {
+  margin: 0;
+  }
+  
+  .payment-methods img {
+  height: 25px;
+  margin-left: 10px;
+  }
+  
+
+  /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.logo img {
+  max-width: 150px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Contact Us Styles */
+.contact-us {
+  padding: 30px;
+  background-color: #f8f8f8;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.contact-info a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Quick Links Styles */
+.quick-links {
+  padding: 30px;
+  background-color: #f0f0f0;
+}
+
+.quick-links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.quick-links li {
+  margin-bottom: 10px;
+}
+
+.quick-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+
+
+
+        /* chi tiết sản phảm */
+main{
+  padding-top: 20px;
+  width: 90%;
+  margin: auto;
+}
+.row{
+  float: left;
+  width: 100%;
+  min-height: 100px;
+  border: 1px solid gray;
+  margin: 20px 0;
+}
+.mr{
+  margin-right: 2%;
+}
+.demo{
+  background-color: red;
+  min-height: 100px;
+}
+
+.boxtrai{
+  float: left;
+  width: 55%;
+}
+.boxphai{
+  float: left;
+  width: 43%;
+}
+.boxtitle{
+  font-size: 20px;
+  margin: 20px;
+}
+.boxcontent{
+  display: flex;
+  justify-content: center;
+}
+.boxcontent img{
+  margin-bottom: 20px;
+}
+main{
+  min-height: 1000px;
+}

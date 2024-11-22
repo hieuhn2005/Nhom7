@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGO</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3 sidebar">
+        <div class="logo">
+          <img src="logo.png" alt="Logo">
+        </div>
+        <nav class="nav flex-column">
+          <a class="nav-link" href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+          <a class="nav-link" href="#"><i class="fas fa-university"></i> Học viên</a>
+          <a class="nav-link" href="#"><i class="fas fa-list-ul"></i> Danh sách Học viên</a>
+          <a class="nav-link" href="#"><i class="fas fa-file-alt"></i> Đơn đăng ký</a>
+          <a class="nav-link" href="#"><i class="fas fa-chart-line"></i> Doanh thu</a>
+          <a class="nav-link" href="#"><i class="fas fa-chart-bar"></i> Danh sách Doanh thu</a>
+          <a class="nav-link" href="#"><i class="fas fa-graduation-cap"></i> Lớp - Môn học</a>
+          <a class="nav-link" href="#"><i class="fas fa-book"></i> Danh sách Lớp</a>
+          <a class="nav-link" href="#"><i class="fas fa-school"></i> Khóa học</a>
+          <a class="nav-link" href="#"><i class="fas fa-user-friends"></i> Lịch sử Chăm sóc</a>
+          <a class="nav-link" href="#"><i class="fas fa-users"></i> Lịch sử Chăm sóc lớp</a>
+          <a class="nav-link" href="#"><i class="fas fa-user"></i> Giảng viên</a>
+          <a class="nav-link" href="#"><i class="fas fa-user-tie"></i> Danh sách Giảng viên</a>
+          <a class="nav-link" href="#"><i class="fas fa-cog"></i> Tổng hợp báo cáo</a>
+        </nav>
+      </div>
+      <div class="col-9 main-content">
+        
+        <div class="product">
+            <h1>Quản lý danh sách sản phẩm</h1><br>
+        <button>Thêm sản phẩm</button>
+        </div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Tên sản phẩn</th>
+              <th>Hình ảnh</th>
+              <th>Ngày sinh</th>
+              <th>Địa chỉ</th>
+              <th>Điện thoại</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Vũ Mạnh</td>
+              <td>Hiệp</td>
+              <td>1/2003</td>
+              <td>Nam</td>
+              <td>096*******</td>
+              <td>
+                <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-eye"></i></a>
+                <a href="#" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
+                <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+              </td>
+            </tr>
+            <!-- Add more rows as needed -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
