@@ -35,14 +35,17 @@
         <form action="index.php?act=updatesp" method="post" enctype="multipart/form-data">
                 <div class="mb10">
                      Chọn danh mục:
+              
                     <select name="iddm" id="">
                      
                         <option value="0" selected>Tất cả</option>
                                     <?php
                                         foreach ($listdanhmuc as $danhmuc) {
-                                            extract($danhmuc);
-                                            if($iddm==$id) echo '<option value="'.$id.'"selected>'.$name.'</option>';
-                                            else echo '<option value="'.$id.'">'.$name.'</option>';
+                                            // extract($danhmuc);
+                                            // print_r($danhmuc);
+
+                                            if($iddm==$danhmuc['id']) echo '<option value="'.$danhmuc['id'].'"selected>'.$danhmuc['name'].'</option>';
+                                            else echo '<option value="'.$danhmuc['id'].'">'.$danhmuc['name'].'</option>';
                                         }
                                     ?>
                                     

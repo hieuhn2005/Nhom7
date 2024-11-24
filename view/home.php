@@ -36,6 +36,28 @@
 <main>
     <div class="productt">
         <br><br>
+      
+    <h1>DANH MỤC SẢN PHẨM</h1>
+    <div class="danhmuc">
+      <ul>
+        <?php
+            foreach ($dsdm as $dm) {
+               extract($dm);
+               $linkdm="index.php?act=sanpham&iddm=".$id;
+               echo '<li><a href="'.$linkdm.'">'.$name.'</a></li>';
+            }
+        ?>
+        <!-- <li><a href="">Iphone</a></li>
+        <li><a href="">Sámung</a></li>
+        <li><a href="">Oppo</a></li>
+        <li><a href="">Remi</a></li>
+        <li><a href="">Nokia</a></li>
+        <li><a href="">doremon</a></li>
+        <li><a href="">nobita</a></li>
+        <li><a href="">Iphone</a></li> -->
+      </ul>
+    </div>
+
         <h1>SẢN PHẨM MỚI</h1>
         <div class="product">
             <?php
@@ -50,7 +72,7 @@
                                 <h3 class="name-pro"><a href="">'.$name.'</a></h3>
                                     <div class="trung">
                                         <p class="price">'.$price.'</p>
-                                        <button>Thêm vào giỏ hàng</button>
+                                        <button>Chi tiết sản phẩm</button>
                            </div>
                            </div>';
                            

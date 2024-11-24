@@ -307,3 +307,25 @@ main{
 main{
   min-height: 1000px;
 }
+            /* danh muc */
+.danhmuc ul{
+  display: flex;
+  list-style-type: none;
+}
+.danhmuc ul li a{
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+}
+.danhmuc ul li{
+  border: 1px solid gray;
+}
+.danhmuc ul li a:hover{
+  background-color: #797878;
+} 
+/* gio hang */
+
+table{
+  width: 100%;
+}
