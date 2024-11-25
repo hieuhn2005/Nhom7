@@ -11,8 +11,10 @@
         $act=$_GET['act'];
         switch ($act) {
             case 'sanphamct':
+                
                 if(isset($_GET['idsp'])&&($_GET['idsp']!="")){
                     $id=$_GET['idsp'];
+                    $sp_cungloai=load_sanpham_cungloai($id);
                     $onesp=loadone_sanpham($id);
                     include "view/sanphamct.php";
                 }else{

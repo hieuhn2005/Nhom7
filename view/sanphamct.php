@@ -21,6 +21,16 @@
         </div>
         <div class="box1">
           <h1>sản phẩm cùng loại</h1>
+          <div class="spcungloai">
+          <?php
+                foreach ($sp_cungloai as $sp_cungloai) {
+                  extract($sp_cungloai);
+                  $linksp="index.php?act=sanphamct&idsp".$id;
+                  echo '<li><a href="'.$linksp.'">'.$name.'</a></li>';
+                }
+            ?>
+            
+          </div>
         </div>
       </div>
       <div class="boxphai">

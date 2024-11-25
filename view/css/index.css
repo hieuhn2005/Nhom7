@@ -354,7 +354,9 @@ table{
 .tien h1{
   color: red;
 }
-
+.spcungloai ul a{
+  padding: 0 60px;
+}
 .tgiohang input{
   background-color: red;
   color: white;
