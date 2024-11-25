@@ -1,26 +1,5 @@
 <footer>
 
-    <div class="footer-content">
-    
-    <div class="copyright">
-    
-    <p>&copy; All Copyrights Reserved by Mironcoder</p>
-    
-    </div>
-    
-    <div class="payment-methods">
-    
-    <img src="view/img/01.jpg" alt="PayPal">
-    
-    <img src="view/img/02.jpg" alt="Maestro">
-    
-    <img src="view/img/03.jpg" alt="Discover">
-    
-    <img src="view/img/04.jpg" alt="Visa">
-    
-    </div>
-    
-    </div>
     
     </footer>
 

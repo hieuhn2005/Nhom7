@@ -160,7 +160,7 @@ nav ul li a:hover {
   
 }
 
-footer {
+/* footer {
   background-color: #008000;
   color: #ffffff;
   padding: 15px 0;
@@ -175,7 +175,7 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
   }
-  
+   */
   .copyright p {
   margin: 0;
   }
@@ -264,49 +264,6 @@ nav a {
 
 
 
-        /* chi tiết sản phảm */
-main{
-  padding-top: 20px;
-  width: 90%;
-  margin: auto;
-}
-.row{
-  float: left;
-  width: 100%;
-  min-height: 100px;
-  border: 1px solid gray;
-  margin: 20px 0;
-}
-.mr{
-  margin-right: 2%;
-}
-.demo{
-  background-color: red;
-  min-height: 100px;
-}
-
-.boxtrai{
-  float: left;
-  width: 55%;
-}
-.boxphai{
-  float: left;
-  width: 43%;
-}
-.boxtitle{
-  font-size: 20px;
-  margin: 20px;
-}
-.boxcontent{
-  display: flex;
-  justify-content: center;
-}
-.boxcontent img{
-  margin-bottom: 20px;
-}
-main{
-  min-height: 1000px;
-}
             /* danh muc */
 .danhmuc ul{
   display: flex;
@@ -329,3 +286,81 @@ main{
 table{
   width: 100%;
 }
+
+/* sản phẩm chi tiết */
+.ctsanpham{
+  padding-top: 20px;
+  width: 90%;
+  margin: auto;
+}
+.boxtrai{
+  float: left;
+  width: 65%;
+  /* border: 1px solid green; */
+  margin-right: 2%;
+}
+.box1{
+  float: left;
+  width: 100%;
+  min-height: 100px;
+  border: 1px solid gray;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+.box1 h1{
+  font-size: 25px;
+}
+.box1 img{
+  width: 40%;
+  display: block;
+  margin: auto;
+  padding: 20px 0;
+  
+  
+  
+}
+.boxphai{
+  float: left;
+  width: 33%;
+  /* border: 1px solid green; */
+}
+.box2{
+  float: left;
+  width: 100%;
+  min-height: 300px;
+  border: 1px solid gray;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+.boxsp{
+  margin: 20px;
+}
+.giat{
+  display: flex;
+  align-items: center;
+  
+}
+.giat input{
+  margin-right: 10px;
+}
+
+.tien{
+  display: flex;
+  align-items: center;
+}
+.tien p{
+  margin-right: 60px;
+}
+.tien h1{
+  color: red;
+}
+
+.tgiohang input{
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  height: 40px;
+  width: 100%;
+}
+
+

@@ -64,12 +64,13 @@
                $i=0;
                 foreach ($spnew as $sp) {
                     extract($sp);
+                    $linksp="index.php?act=sanphamct&idsp=".$id;
                     $hinh=$img_path.$img;
                    
                     echo ' 
                             <div class="pro-items">
-                                <a href=""><img src="'.$hinh.'" alt="" class="img-pro"></a>
-                                <h3 class="name-pro"><a href="">'.$name.'</a></h3>
+                                <a href="'.$linksp.'"><img src="'.$hinh.'" alt="" class="img-pro"></a>
+                                <h3 class="name-pro"><a href="'.$linksp.'">'.$name.'</a></h3>
                                     <div class="trung">
                                         <p class="price">'.$price.'</p>
                                         <button>Chi tiết sản phẩm</button>
