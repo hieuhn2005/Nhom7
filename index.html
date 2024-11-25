@@ -25,10 +25,17 @@
       <button type="submit">Tìm kiếm</button>
     </div>
     <div class="user-actions">
-      <div class="nguoi">
+      <!-- Người dùng -->
+      <div class="nguoi" id="user-menu-toggle">
         <i class="fa-solid fa-user"></i>
-        <p>người dùng</p>
+        <p>Người dùng</p>
+        <!-- Dropdown menu -->
+        <div class="user-dropdown" id="user-dropdown">
+          <a href="index.php?act=login">Đăng nhập</a>
+          <a href="index.php?act=register">Đăng ký</a>
+        </div>
       </div>
+      <!-- Giỏ hàng -->
       <div class="giohang">
         <i class="fa-solid fa-cart-arrow-down"></i>
         <p>Giỏ hàng</p>
@@ -36,132 +43,60 @@
     </div>
   </header>
   <div class="banner">
-    <img src="view/img/desk_header_0abb626df2.png" alt="">
+    <img src="view/img/desk_header_0abb626df2.png" alt="Banner">
   </div>
   <main>
-   <div class="productt">
-    <br><br>
+    <div class="productt">
+      <br><br>
       <h1>SẢN PHẨM NỔI BẬT</h1>
       <div class="product">
         <div class="pro-items">
-          <a href=""><img src="view/img/iphone-x-256gb-silver-400x400.jpg" alt="" class="img-pro"></a>
-          <h3 class="name-pro"><a href="">Laptop HP 15s i3 </a></h3>
-            <div class="trung">
-              <p class="price">7.990.000đ </p>
-              <button>Thêm vào giỏ hàng</button>
-            </div>
+          <a href="#"><img src="view/img/iphone-x-256gb-silver-400x400.jpg" alt="" class="img-pro"></a>
+          <h3 class="name-pro"><a href="#">Laptop HP 15s i3 </a></h3>
+          <div class="trung">
+            <p class="price">7.990.000đ </p>
+            <button>Thêm vào giỏ hàng</button>
+          </div>
         </div>
-        <div class="pro-items">
-          <a href=""><img src="view/img/iphone-x-256gb-silver-400x400.jpg" alt="" class="img-pro"></a>
-          <h3 class="name-pro"><a href="">Laptop HP 15s i3 </a></h3>
-            <div class="trung">
-              <p class="price">7.990.000đ </p>
-              <button>Thêm vào giỏ hàng</button>
-            </div>
-        </div>
-        <div class="pro-items">
-          <a href=""><img src="view/img/iphone-x-256gb-silver-400x400.jpg" alt="" class="img-pro"></a>
-          <h3 class="name-pro"><a href="">Laptop HP 15s i3 </a></h3>
-            <div class="trung">
-              <p class="price">7.990.000đ </p>
-              <button>Thêm vào giỏ hàng</button>
-            </div>
-        </div>
-        <div class="pro-items">
-          <a href=""><img src="view/img/iphone-x-256gb-silver-400x400.jpg" alt="" class="img-pro"></a>
-          <h3 class="name-pro"><a href="">Laptop HP 15s i3 </a></h3>
-            <div class="trung">
-              <p class="price">7.990.000đ </p>
-              <button>Thêm vào giỏ hàng</button>
-            </div>
-        </div>
-        <div class="pro-items">
-          <a href=""><img src="view/img/iphone-x-256gb-silver-400x400.jpg" alt="" class="img-pro"></a>
-          <h3 class="name-pro"><a href="">Laptop HP 15s i3 </a></h3>
-            <div class="trung">
-              <p class="price">7.990.000đ </p>
-              <button>Thêm vào giỏ hàng</button>
-            </div>
-        </div>
-        <div class="pro-items">
-          <a href=""><img src="view/img/iphone-x-256gb-silver-400x400.jpg" alt="" class="img-pro"></a>
-          <h3 class="name-pro"><a href="">Laptop HP 15s i3 </a></h3>
-            <div class="trung">
-              <p class="price">7.990.000đ </p>
-              <button>Thêm vào giỏ hàng</button>
-            </div>
-        </div>
-        
+        <!-- Lặp lại sản phẩm khác -->
+      </div>
     </div>
-    <h1 class="cate">SẢN PHẨM MỚI</h1>
-    <div class="product">
-      <div class="pro-items">
-        <a href=""><img src="view/img/iphone-x-256gb-silver-400x400.jpg" alt="" class="img-pro"></a>
-        <h3 class="name-pro"><a href="">Laptop HP 15s i3 </a></h3>
-          <div class="trung">
-            <p class="price">7.990.000đ </p>
-            <button>Thêm vào giỏ hàng</button>
-          </div>
-      </div>
-      <div class="pro-items">
-        <a href=""><img src="view/img/iphone-x-256gb-silver-400x400.jpg" alt="" class="img-pro"></a>
-        <h3 class="name-pro"><a href="">Laptop HP 15s i3 </a></h3>
-          <div class="trung">
-            <p class="price">7.990.000đ </p>
-            <button>Thêm vào giỏ hàng</button>
-          </div>
-      </div>
-      <div class="pro-items">
-        <a href=""><img src="view/img/iphone-x-256gb-silver-400x400.jpg" alt="" class="img-pro"></a>
-        <h3 class="name-pro"><a href="">Laptop HP 15s i3 </a></h3>
-          <div class="trung">
-            <p class="price">7.990.000đ </p>
-            <button>Thêm vào giỏ hàng</button>
-          </div>
-      </div>
-      <div class="pro-items">
-        <a href=""><img src="view/img/iphone-x-256gb-silver-400x400.jpg" alt="" class="img-pro"></a>
-        <h3 class="name-pro"><a href="">Laptop HP 15s i3 </a></h3>
-          <div class="trung">
-            <p class="price">7.990.000đ </p>
-            <button>Thêm vào giỏ hàng</button>
-          </div>
-      </div>
-      <div class="pro-items">
-        <a href=""><img src="view/img/iphone-x-256gb-silver-400x400.jpg" alt="" class="img-pro"></a>
-        <h3 class="name-pro"><a href="">Laptop HP 15s i3 </a></h3>
-          <div class="trung">
-            <p class="price">7.990.000đ </p>
-            <button>Thêm vào giỏ hàng</button>
-          </div>
-   </div>
-    
   </main>
-
   <footer>
-
     <div class="footer-content">
-    
-    <div class="copyright">
-    
-    <p>&copy; All Copyrights Reserved by Mironcoder</p>
-    
+      <div class="copyright">
+        <p>&copy; All Copyrights Reserved by Mironcoder</p>
+      </div>
+      <div class="payment-methods">
+        <img src="view/img/01.jpg" alt="PayPal">
+        <img src="view/img/02.jpg" alt="Maestro">
+        <img src="view/img/03.jpg" alt="Discover">
+        <img src="view/img/04.jpg" alt="Visa">
+      </div>
     </div>
-    
-    <div class="payment-methods">
-    
-    <img src="view/img/01.jpg" alt="PayPal">
-    
-    <img src="view/img/02.jpg" alt="Maestro">
-    
-    <img src="view/img/03.jpg" alt="Discover">
-    
-    <img src="view/img/04.jpg" alt="Visa">
-    
-    </div>
-    
-    </div>
-    
-    </footer>
+  </footer>
+
+  <script>
+    // JavaScript để xử lý dropdown menu
+    const userMenuToggle = document.getElementById('user-menu-toggle');
+    const userDropdown = document.getElementById('user-dropdown');
+
+    userMenuToggle.addEventListener('click', (event) => {
+      event.preventDefault();
+      // Toggle menu hiển thị hoặc ẩn
+      if (userDropdown.style.display === 'block') {
+        userDropdown.style.display = 'none';
+      } else {
+        userDropdown.style.display = 'block';
+      }
+    });
+
+    // Đóng menu nếu nhấn ra ngoài
+    document.addEventListener('click', (event) => {
+      if (!userMenuToggle.contains(event.target) && !userDropdown.contains(event.target)) {
+        userDropdown.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
