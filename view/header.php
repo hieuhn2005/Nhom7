@@ -27,9 +27,22 @@
       </form>
     </div>
     <div class="user-actions">
-      <div class="nguoi">
+      <div class="nguoi" id="user-menu-toggle">
         <i class="fa-solid fa-user"></i>
+        <?php if(!isset($_SESSION['user'])): ?>
         <p>người dùng</p>
+        <?php else: ?>
+        <p><?= $_SESSION['user']['username'] ?></p>
+        <?php endif; ?>
+        <!-- Dropdown menu -->
+        <div class="user-dropdown" id="user-dropdown">
+          <?php if(!isset($_SESSION['user'])): ?>
+          <a href="index.php?act=login">Đăng nhập</a>
+          <a href="index.php?act=register">Đăng ký</a>
+          <?php else: ?>
+          <a href="index.php?act=logout">Đăng xuất</a>
+          <?php endif; ?>
+        </div>
       </div>
       <div class="giohang">
         <i class="fa-solid fa-cart-arrow-down"></i>
