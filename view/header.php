@@ -30,9 +30,7 @@
       <div class="nguoi" id="user-menu-toggle">
         <i class="fa-solid fa-user"></i>
         <?php if(!isset($_SESSION['user'])): ?>
-
         <p>người dùng</p>
-
         <?php else: ?>
         <p><?= $_SESSION['user']['username'] ?></p>
         <?php endif; ?>
