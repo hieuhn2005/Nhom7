@@ -34,7 +34,7 @@
             </div>
      </div>
 <main>
-    <div class="productt">
+<div class="productt">
         <br><br>
       
     <h1>DANH MỤC SẢN PHẨM</h1>
@@ -47,16 +47,9 @@
                echo '<li><a href="'.$linkdm.'">'.$name.'</a></li>';
             }
         ?>
-        <!-- <li><a href="">Iphone</a></li>
-        <li><a href="">Sámung</a></li>
-        <li><a href="">Oppo</a></li>
-        <li><a href="">Remi</a></li>
-        <li><a href="">Nokia</a></li>
-        <li><a href="">doremon</a></li>
-        <li><a href="">nobita</a></li>
-        <li><a href="">Iphone</a></li> -->
+
       </ul>
-    </div>
+</div>
 
         <h1>SẢN PHẨM MỚI</h1>
         <div class="product">

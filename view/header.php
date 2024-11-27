@@ -21,8 +21,10 @@
       </ul>
     </nav>
     <div class="search">
-      <input type="text" placeholder="Tìm kiếm sản phẩm">
-      <button type="submit">Tìm kiếm</button>
+      <form action="index.php?act=sanpham" method="post">
+        <input type="text" name="kyw" placeholder="Tìm kiếm sản phẩm">
+        <button type="submit" name="timkiem">Tìm kiếm</button>
+      </form>
     </div>
     <div class="user-actions">
       <div class="nguoi">

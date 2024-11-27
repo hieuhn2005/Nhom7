@@ -42,6 +42,7 @@ nav ul li a:hover {
   
   text-decoration: underline;
   color: rgb(255, 1, 1);
+  background-color: gray;
 }
 
 
@@ -309,6 +310,7 @@ table{
 }
 .box1 h1{
   font-size: 25px;
+  margin: 20px;
 }
 .box1 img{
   width: 40%;
@@ -316,8 +318,11 @@ table{
   margin: auto;
   padding: 20px 0;
   
+
   
-  
+}
+.box1 ul a{
+    margin: 20px;
 }
 .boxphai{
   float: left;
