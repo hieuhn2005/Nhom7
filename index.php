@@ -1,18 +1,67 @@
 <?php
+    session_start();
+
     include "model/pdo.php";
+    include "model/user.php";
     include "model/danhmuc.php";
     include "model/sanpham.php";
-    include "view/header.php";
-
     include "global.php";
-    
 
     $spnew=loadall_sanpham_home();
     $dsdm=loadall_danhmuc();
-    if((isset($_GET['act']))&&($_GET['act']!="")){
-        $act=$_GET['act'];
+
+    $act = isset($_GET['act']) ? $_GET['act'] : '';
+
+    if (!in_array($act, ['login', 'register'])) {
+        include "view/header.php";
+    }
+
+    if($act){
         switch ($act) {
-            
+            case 'login':
+                if (isset($_POST['login'])) {
+                    $username = isset($_POST['username']) ? trim($_POST['username']) : '';
+                    $password = isset($_POST['password']) ? $_POST['password'] : '';
+    
+                    $result = check_login($username, $password);
+                    if ($result['success']) {
+                        $_SESSION['user'] = $result['user'];
+                        if ($_SESSION['user']['role'] == 1) {
+                            header('Location: /duan1/admin/index.php?act=addsp');
+                            exit;
+                        } else {
+                            header('Location: /duan1/index.php');
+                            exit;
+                        }
+                    } else {
+                        $error = $result['message'];
+                    }
+                }
+                include "view/login.php";
+                break;
+    
+            case 'register':
+                if (isset($_POST['register'])) {
+                    $email = trim($_POST['email']);
+                    $username = trim($_POST['username']);
+                    $password = $_POST['password'];
+    
+                    $result = register_user($email, $username, $password);
+                    if ($result['success']) {
+                        $success = $result['message'];
+                        header('Location: index.php?act=login');
+                    } else {
+                        $error = $result['message'];
+                    }
+                }
+                include "view/register.php";
+                break;
+    
+            case 'logout':
+                session_destroy();
+                header('Location: index.php');
+                break;
+
             case 'sanpham':
                 if(isset($_POST['kyw'])&&($_POST['kyw']!="")){
                     $kyw=$_POST['kyw'];
