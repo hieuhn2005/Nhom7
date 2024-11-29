@@ -8,8 +8,11 @@
     include "model/cart.php";
     include "global.php";
 
+    $user_id = $_SESSION['user']['id'];
+
     $spnew = loadall_sanpham_home();
     $dsdm = loadall_danhmuc();
+    $cart_items = get_cart($user_id);
 
     $act = isset($_GET['act']) ? $_GET['act'] : '';
 

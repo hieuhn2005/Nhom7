@@ -31,8 +31,4 @@ function clear_cart($user_id) {
     $sql = "DELETE FROM cart WHERE user_id = ?";
     pdo_execute($sql, $user_id);
 }
-
-
-
-
 ?>
