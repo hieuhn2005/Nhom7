@@ -8,7 +8,7 @@
     include "model/cart.php";
     include "global.php";
 
-    $user_id = $_SESSION['user']['id'];
+    $user_id = isset($_SESSION['user']['id']) ? $_SESSION['user']['id'] : null;
 
     $spnew = loadall_sanpham_home();
     $dsdm = loadall_danhmuc();
