@@ -47,7 +47,7 @@
             <div class="giohang">
   <a href="index.php?act=cart">
     <i class="fa-solid fa-cart-arrow-down"></i>
-    <p>Giỏ hàng</p>
+    <p>Giỏ hàng (<?= count($cart_items) ?>)</p>
   </a>
 </div>
 

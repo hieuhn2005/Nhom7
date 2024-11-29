@@ -66,7 +66,7 @@
                                 <h3 class="name-pro"><a href="'.$linksp.'">'.$name.'</a></h3>
                                     <div class="trung">
                                         <p class="price">'.$price.'</p>
-                                        <button>Chi tiết sản phẩm</button>
+                                        <a href="index.php?add_to_cart='.$sp['id'].'">Thêm vào giỏ</a>
                            </div>
                            </div>';
                            

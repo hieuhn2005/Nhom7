@@ -18,7 +18,7 @@
             <td>
                 <form action="index.php" method="post">
                     <input type="number" name="quantity" value="<?= $item['quantity'] ?>" min="1">
-                    <input type="hidden" name="product_id" value="<?= $item['id'] ?>">
+                    <input type="hidden" name="product_id" value="<?= $item['product_id'] ?>">
                     <button type="submit" name="update_cart">Cập nhật</button>
                 </form>
             </td>
