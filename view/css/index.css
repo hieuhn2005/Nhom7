@@ -455,3 +455,58 @@ table{
 .user-dropdown a:hover {
   background-color: #f1f1f1;
 }
+
+
+
+/* Giỏ hàng */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background-color: #f4f4f4;
+}
+
+table td a {
+  color: red;
+  text-decoration: none;
+}
+
+table td a:hover {
+  text-decoration: underline;
+}
+
+form input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  text-align: center;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #008CBA;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+

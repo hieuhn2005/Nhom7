@@ -44,9 +44,13 @@
           <?php endif; ?>
         </div>
       </div>
-      <div class="giohang">
-        <i class="fa-solid fa-cart-arrow-down"></i>
-        <p>Giỏ hàng</p>
-      </div>
+            <div class="giohang">
+  <a href="index.php?act=cart">
+    <i class="fa-solid fa-cart-arrow-down"></i>
+    <p>Giỏ hàng</p>
+  </a>
+</div>
+
+
     </div>
   </header>
