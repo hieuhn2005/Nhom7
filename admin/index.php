@@ -1,4 +1,11 @@
 <?php
+    session_start();
+
+    if (!isset($_SESSION['user']) || $_SESSION['user']['role'] != 1) {
+        header('Location: /duan1/index.php?act=login');
+        exit;
+    }
+
     include "../model/pdo.php";
     include "../model/danhmuc.php";
     include "../model/sanpham.php";
