@@ -19,5 +19,32 @@ function showSlides() {
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
     </script>
+
+<script>
+      // JavaScript để xử lý dropdown menu
+      const userMenuToggle = document.getElementById('user-menu-toggle');
+      const userDropdown = document.getElementById('user-dropdown');
+
+      userMenuToggle.addEventListener('click', (event) => {
+        if (event.target.tagName === 'A') {
+          return;
+        }
+
+        event.preventDefault();
+        // Toggle menu hiển thị hoặc ẩn
+        if (userDropdown.style.display === 'block') {
+          userDropdown.style.display = 'none';
+        } else {
+          userDropdown.style.display = 'block';
+        }
+      });
+
+      // Đóng menu nếu nhấn ra ngoài
+      document.addEventListener('click', (event) => {
+        if (!userMenuToggle.contains(event.target) && !userDropdown.contains(event.target)) {
+          userDropdown.style.display = 'none';
+        }
+      });
+    </script>
 </body>
 </html>

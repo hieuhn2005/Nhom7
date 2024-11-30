@@ -2,6 +2,7 @@
     include "../model/pdo.php";
     include "../model/danhmuc.php";
     include "../model/sanpham.php";
+    include "../model/user.php";
     include "header.php";
 
     if(isset($_GET['act'])){
@@ -130,6 +131,12 @@
                 $listsanpham=loadall_sanpham("",0   );
                 include "sanpham/add.php";
                 break;
+
+            case 'dskh':
+                   
+                $listtaikhoan=loadall_taikhoan();
+                include "taikhoan/list.php";
+                break;    
 
             default:
                 include "home.php";
