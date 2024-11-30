@@ -1,7 +1,7 @@
-<h2>Giỏ Hàng</h2>
+<h2 class="cart-title">Giỏ Hàng</h2>
 
 <?php if (empty($cart_items)): ?>
-    <p>Giỏ hàng của bạn hiện đang trống.</p>
+    <p class="empty-cart">Giỏ hàng của bạn hiện đang trống.</p>
 <?php else: ?>
     <table border=1>
         <tr>
@@ -28,7 +28,10 @@
         <?php endforeach; ?>
     </table>
 
-    <p><strong>Tổng cộng:</strong> <?= number_format(array_sum(array_column($cart_items, 'total')), 0, ',', '.') ?> VNĐ</p>
+        <p class="total-amount"><strong>Tổng cộng:</strong> <?= number_format(array_sum(array_column($cart_items, 'total')), 0, ',', '.') ?> VNĐ</p>
 
-    <a href="checkout.php">Thanh toán</a>
+        <form action="checkout.php" method="get">
+            <button type="submit" class="checkout-btn">Đặt hàng</button>
+        </form>
+    </div>
 <?php endif; ?>
