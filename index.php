@@ -5,6 +5,7 @@
     include "model/user.php";
     include "model/danhmuc.php";
     include "model/sanpham.php";
+
     include "model/cart.php";
     include "global.php";
 
@@ -14,11 +15,13 @@
     $dsdm = loadall_danhmuc();
     $cart_items = get_cart($user_id);
 
+
     $act = isset($_GET['act']) ? $_GET['act'] : '';
 
     if (!in_array($act, ['login', 'register'])) {
         include "view/header.php";
     }
+
 
     // Kiểm tra nếu có hành động thêm vào giỏ hàng
     if (isset($_GET['add_to_cart'])) {
@@ -88,6 +91,7 @@
 
     // Xử lý các hành động khác (login, register, etc.)
     if ($act) {
+
         switch ($act) {
             case 'login':
                 if (isset($_POST['login'])) {
@@ -98,7 +102,9 @@
                     if ($result['success']) {
                         $_SESSION['user'] = $result['user'];
                         if ($_SESSION['user']['role'] == 1) {
+
                             header('Location: /duan1/admin/index.php');
+
                             exit;
                         } else {
                             header('Location: /duan1/index.php');
@@ -121,7 +127,9 @@
                     if ($result['success']) {
                         $success = $result['message'];
                         header('Location: index.php?act=login');
+
                         exit;
+
                     } else {
                         $error = $result['message'];
                     }
@@ -129,10 +137,12 @@
                 include "view/register.php";
                 break;
 
+
             case 'logout':
                 session_destroy();
                 header('Location: index.php');
                 exit;
+
 
             case 'sanpham':
                 if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
