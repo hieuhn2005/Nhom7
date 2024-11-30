@@ -1,4 +1,11 @@
 <?php
+    function loadall_taikhoan(){
+        $sql="select * from users order by id desc";
+        $listtaikhoan=pdo_query($sql);
+        return $listtaikhoan;
+    }
+
+
 function register_user($email, $username, $password) {
     // Kiểm tra tên đăng nhập tồn tại
     if (check_username_exists($username)) {
