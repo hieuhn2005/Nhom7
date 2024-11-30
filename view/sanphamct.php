@@ -53,9 +53,15 @@
             <p>Giá tiền:</p>
             <h1>9980000 đ</h1>
           </div><br>
-          <div class="tgiohang">
 
-            <input type="submit" value="Thêm vào giỏ hàng">
+          
+          <div class="tgiohang">
+    <!-- Thêm link vào nút "Thêm vào giỏ hàng" -->
+    <a href="index.php?add_to_cart=<?= $onesp['id'] ?>&quantity=1" class="add-to-cart-link">
+        <button type="button">Thêm vào giỏ hàng</button>
+    </a>
+</div>
+
           </div>
             </div>
         </div>
