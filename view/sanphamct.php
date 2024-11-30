@@ -2,22 +2,28 @@
       <div class="boxtrai">
 
         <div class="box1">
-          <?php
-             extract($onesp);
-          ?>
-          <h1><?=$name?></h1>
-      
+            <?php
+              extract($onesp);
+            ?>
+            <h1><?=$name?></h1>
+        
 
-        <?php
-           
-            $img=$img_path.$img;
-          
-            echo '<img src="'.$img.'" alt="">';
-            echo $mota;
-        ?>
+          <?php
+            
+              $img=$img_path.$img;
+            
+              echo '<img src="'.$img.'" alt="">';
+              echo $mota;
+          ?>
         </div>
-        <div class="box1">
-          <h1>bình luận</h1>
+               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script>
+                    $(document).ready(function(){
+                        $("#binhluan").load("view/binhluan/binhluan.php",{idpro: <?=$id?>});
+                    });
+                </script>
+        <div class="boxbinh" id="binhluan">
+          <!-- <h1>bình luận</h1> -->
         </div>
         <div class="box1">
           <h1>sản phẩm cùng loại</h1>

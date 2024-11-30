@@ -93,7 +93,6 @@
                 if (isset($_POST['login'])) {
                     $username = isset($_POST['username']) ? trim($_POST['username']) : '';
                     $password = isset($_POST['password']) ? $_POST['password'] : '';
-
                     $result = check_login($username, $password);
                     if ($result['success']) {
                         $_SESSION['user'] = $result['user'];
@@ -110,13 +109,11 @@
                 }
                 include "view/login.php";
                 break;
-
             case 'register':
                 if (isset($_POST['register'])) {
                     $email = trim($_POST['email']);
                     $username = trim($_POST['username']);
                     $password = $_POST['password'];
-
                     $result = register_user($email, $username, $password);
                     if ($result['success']) {
                         $success = $result['message'];
