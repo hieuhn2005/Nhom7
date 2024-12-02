@@ -42,20 +42,17 @@
       <div class="boxphai">
         <div class="box2">
             <div class="boxsp">
+            <?php
+              extract($onesp);
+              ?>
               <h1><?=$name?></h1>
-          <div class="giat">
-            <p>dung lượng:</p>
-            <input type="submit" value="64GB">
-            <input type="submit" value="128GB">
-            <input type="submit" value="256GB">
-          </div><br>
           <div class="tien">
             <p>Giá tiền:</p>
-            <h1>9980000 đ</h1>
+            <h1><?=$price?>đ</h1>
           </div><br>
           <div class="tgiohang">
 
-            <input type="submit" value="Thêm vào giỏ hàng">
+          <a href="index.php?add_to_cart='.$sp['id'].'"><input type="submit" value="Thêm vào giỏ hàng"></a>
           </div>
             </div>
         </div>

@@ -6,7 +6,7 @@
             <div class="mySlides fade">
            
             <img src="view/img/banner1.png" style="width:100%">
-            
+          
             </div>
 
             <div class="mySlides fade">
@@ -34,9 +34,11 @@
             </div>
      </div>
 <main>
+
+
 <div class="productt">
         <br><br>
-      
+    
     <h1>DANH MỤC SẢN PHẨM</h1>
     <div class="danhmuc">
       <ul>
@@ -53,7 +55,7 @@
 
         <h1>SẢN PHẨM MỚI</h1>
         <div class="product">
-            <?php
+        <?php
                $i=0;
                 foreach ($spnew as $sp) {
                     extract($sp);
@@ -66,7 +68,7 @@
                                 <h3 class="name-pro"><a href="'.$linksp.'">'.$name.'</a></h3>
                                     <div class="trung">
                                         <p class="price">'.$price.'</p>
-                                        <button>Chi tiết sản phẩm</button>
+                                        <a href="index.php?add_to_cart='.$sp['id'].'">Thêm vào giỏ</a>
                            </div>
                            </div>';
                            

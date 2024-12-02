@@ -3,6 +3,9 @@
     include "../model/danhmuc.php";
     include "../model/sanpham.php";
     include "../model/user.php";
+    include "../model/binhluan.php";
+    include "../model/thongke.php";
+
     include "header.php";
 
     if(isset($_GET['act'])){
@@ -137,6 +140,28 @@
                 $listtaikhoan=loadall_taikhoan();
                 include "taikhoan/list.php";
                 break;    
+            case 'dsbl':
+                   
+                $listbinhluan=loadall_binhluan(0);
+                include "binhluan/list.php";
+                break;    
+            case 'xoabl':
+                if(isset($_GET['id'])&&($_GET['id']>0)){
+                        delete_binhluan($_GET['id']);
+                    }
+    
+                    $listbinhluan=loadall_binhluan("",0);
+                    include "binhluan/list.php";
+                    break;   
+            
+            case 'thongke':
+                $listthongke=loadall_thongke();
+                include "thongke/list.php";
+                break;
+            case 'bieudo':
+                $listthongke=loadall_thongke();
+                include "thongke/bieudo.php";
+                break;
 
             default:
                 include "home.php";
