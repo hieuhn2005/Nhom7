@@ -4,6 +4,8 @@
     include "../../model/binhluan.php";
 
     $idpro= $_REQUEST['idpro'];
+
+    $dsbl=loadall_binhluan($idpro);
  ?>
 
 <!DOCTYPE html>
@@ -25,15 +27,19 @@
 
     <div class="danhmuc">
         <ul>
+            
+  <table>
             <?php
-            echo "Nội dung bình luận ở đây".$idpro;
-                // foreach ($dsdm as $dm) {
-                //    extract($dm);
-                //    $linkdm="index.php?act=sanpham&iddm=".$id;
-                //    echo '<li><a href="'.$linkdm.'">'.$name.'</a></li>';
-                // }
+            
+                foreach ($dsbl as $bl) {
+                   extract($bl);
+            
+                  
+                   echo '<tr><td>"'.$noidung.'"</td>';
+                   echo '<td>"'.$ngaybinhluan.'"</td></tr>';
+                }
             ?>
-
+</table>
         </ul>
     </div>
 
@@ -54,6 +60,12 @@
                             $idpro=$_POST['idpro'];
                             $iduser=$_SESSION['user']['id'];
                             $ngaybinhluan=date('h:i:sa d/m/y');
+
+                            $noidung = $_POST['noidung'] ?? ''; // Hoặc một giá trị mặc định
+                            $idpro = $_POST['idpro'] ?? '';
+                            $ngaybinhluan = date('Y-m-d H:i:s'); // Ví dụ, ngày hiện tại
+                            $iduser = $_SESSION['user_id'] ?? 0; // Hoặc một giá trị mặc định khác
+
                             insert_binhluan($noidung,$idpro,$ngaybinhluan);
                             header("Location: ".$_SERVER['HTTP_REFERER']);
                         }

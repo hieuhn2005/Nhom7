@@ -30,12 +30,14 @@
       <div class="nguoi" id="user-menu-toggle">
         <i class="fa-solid fa-user"></i>
         <?php if(!isset($_SESSION['user'])): ?>
+
         <p>người dùng</p>
+
         <?php else: ?>
         <p><?= $_SESSION['user']['username'] ?></p>
         <?php endif; ?>
         <!-- Dropdown menu -->
-        <div class="user-dropdown" id="user-dropdown"  >
+        <div class="user-dropdown" id="user-dropdown">
           <?php if(!isset($_SESSION['user'])): ?>
           <a href="index.php?act=login">Đăng nhập</a>
           <a href="index.php?act=register">Đăng ký</a>
@@ -44,9 +46,13 @@
           <?php endif; ?>
         </div>
       </div>
-      <div class="giohang">
-        <i class="fa-solid fa-cart-arrow-down"></i>
-        <p>Giỏ hàng</p>
-      </div>
+            <div class="giohang">
+  <a href="index.php?act=cart">
+    <i class="fa-solid fa-cart-arrow-down"></i>
+    <p>Giỏ hàng (<?= count($cart_items) ?>)</p>
+  </a>
+</div>
+
+
     </div>
   </header>
