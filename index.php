@@ -6,9 +6,12 @@
     include "model/danhmuc.php";
     include "model/sanpham.php";
     include "model/cart.php";
+    include "model/order.php";
+    include "model/order_detail.php";
     include "global.php";
 
     $user_id = isset($_SESSION['user']['id']) ? $_SESSION['user']['id'] : null;
+    $order =  isset($_SESSION['cart']['order']) ? $_SESSION['cart']['order'] : null;
 
     $spnew = loadall_sanpham_home();
     $dsdm = loadall_danhmuc();
@@ -163,8 +166,46 @@
                     include "view/home.php";
                 }
                 break;
-           
-            
+
+            case 'checkout':
+                if(isset($_POST['checkout'])) {
+                    $name = trim($_POST['name']);
+                    $phone = trim($_POST['phone']);
+                    $address = trim($_POST['address']);
+                    if (empty($name) || empty($phone) || empty($address)) {
+                        header("Location: index.php?act=checkout");
+                        exit();
+                    }
+
+                    $total_amount = array_sum(array_column($cart_items, 'total'));
+                    $order_id = create_order($user_id, $name, $total_amount, $address, $phone);
+
+                    foreach ($cart_items as $item) {
+                        create_order_detail($order_id, $item['product_id'], $item['quantity'], $item['price'], $item['total']);
+                    }
+
+                    $_SESSION['cart']['order'] = [
+                        'name' => $name,
+                        'address' =>  $address,
+                        'phone' => $phone,
+                        'total_amount' => $total_amount,
+                        'order_id' => $order_id
+                    ];
+
+                    clear_cart($user_id);
+
+                    header("Location: index.php?act=thankyou");
+                    exit();
+                }
+
+                include "view/checkout.php";
+                break;
+
+            case 'thankyou':
+                unset($_SESSION['cart']['order']);
+                include "view/thankyou.php";
+                break;
+
             case 'tuyendung':
                 include "view/tuyendung.php";
                 break;

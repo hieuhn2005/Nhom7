@@ -23,6 +23,12 @@ function pdo_execute($sql){
         $conn = pdo_get_connection();
         $stmt = $conn->prepare($sql);
         $stmt->execute($sql_args);
+
+        if ($conn->lastInsertId() !== null) {
+            return $conn->lastInsertId();
+        }
+
+        return null;
     }
     catch(PDOException $e){
         throw $e;
