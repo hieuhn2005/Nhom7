@@ -163,9 +163,7 @@
                     include "view/home.php";
                 }
                 break;
-            case 'tintuc':
-                include "view/tintuc.php";
-                break;
+           
             
             case 'tuyendung':
                 include "view/tuyendung.php";

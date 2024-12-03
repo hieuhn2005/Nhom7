@@ -13,7 +13,7 @@
     <nav>
       <ul>
         <li><a href="index.php">Trang chủ</a></li>
-        <li><a href="index.php?act=tintuc">Tin tức</a></li>
+        <!-- <li><a href="index.php?act=tintuc">Tin tức</a></li> -->
         <li><a href="index.php?act=tuyendung">Tuyển dụng</a></li>
         <li><a href="index.php?act=gioithieu">Giới thiệu</a></li>
        
