@@ -13,6 +13,7 @@
     include "../model/binhluan.php";
     include "../model/thongke.php";
     include "../model/order.php";
+    include "../model/order_detail.php";
 
     include "header.php";
 

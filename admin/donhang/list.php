@@ -1,6 +1,6 @@
 <div class="col-9 main-content">
     <div class="product">
-        <h1>QUẢN LÝ ĐƠN HÀNG</h1><br>
+        <h1>QUẢN LÝ ĐƠN HÀNG</h1>
     </div>
 
     <table class="table table-striped">
@@ -26,6 +26,9 @@
                 <td><?= $shipping_address ?></td>
                 <td><?= number_format($total_amount, 0, ',', '.') ?> ₫</td>
                 <td><?= $created_at ?></td>
+                <td>
+                    <a href="index.php?act=donhang&id=<?= $id ?>" class="btn btn-success btn-sm"><i class="fas fa-eye"></i></a>
+                </td>
             </tr>
         <?php endforeach; ?>
         </tbody>
