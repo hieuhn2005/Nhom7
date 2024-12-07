@@ -24,6 +24,7 @@
             <a class="nav-link" href="index.php?act=adddm"><i class="fas fa-list-ul"></i> Danh mục</a>
             <a class="nav-link" href="index.php?act=dskh"><i class="fas fa-user-friends"></i> Quản lí tài khoản</a>
             <a class="nav-link" href="index.php?act=dsbl"><i class="fas fa-file-alt"></i> Quản lí bình luận</a>
+            <a class="nav-link" href="index.php?act=donhang"><i class="fas fa-file-alt"></i> Quản lí dơn hàng</a>
             <a class="nav-link" href="index.php?act=bieudo"><i class="fas fa-chart-line"></i> Biểu đồ</a>
             <a class="nav-link" href="index.php?act=thongke"><i class="fas fa-chart-bar"></i> Thống kê</a>
             <a class="nav-link" href="http://localhost/duan1/index.php"><i class="fa-solid fa-right-to-bracket"></i> Quay lại</a>

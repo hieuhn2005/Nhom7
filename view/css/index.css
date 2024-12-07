@@ -375,9 +375,6 @@ table{
 }
 
 
-
-
-
 /* dang ki dang nhap */
 .auth-container {
   max-width: 400px;
@@ -633,3 +630,116 @@ ul li span{
 	font-weight: bold;
 	color: red;
 }
+
+
+
+/* Giỏ hàng */
+.cart-title {
+  text-align: center;
+  font-size: 28px;
+  margin: 20px 0;
+  color: #333;
+  font-weight: bold;
+}
+
+.empty-cart {
+  text-align: center;
+  font-size: 18px;
+  color: #999;
+}
+
+/* Khung giỏ hàng */
+.cart-container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Bảng giỏ hàng */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.cart-table th {
+  background-color: #f8f8f8;
+  color: #333;
+  font-weight: bold;
+}
+
+.product-name,
+.product-price,
+.product-total {
+  font-size: 16px;
+}
+
+.product-quantity .quantity-input {
+  width: 60px;
+  padding: 5px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.update-btn {
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.update-btn:hover {
+  background-color: #218838;
+}
+
+.product-action .delete-btn {
+  color: #dc3545;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.product-action .delete-btn:hover {
+  color: #c82333;
+}
+
+/* Tổng cộng */
+.total-amount {
+  text-align: right;
+  font-size: 22px;  /* Tăng kích thước chữ */
+  margin-top: 20px;
+  color: #ff6347;  /* Thay đổi màu sắc thành màu đỏ cam nổi bật */
+  font-weight: bold;
+}
+
+/* Nút Đặt hàng */
+.checkout-btn {
+  display: block;
+  width: 250px;  /* Thu nhỏ chiều rộng của nút */
+  padding: 12px 20px;
+  background-color: #28a745;  /* Màu nền xanh lá cây */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;  /* Giảm kích thước chữ */
+  text-align: center;
+  margin: 30px auto 0;  /* Căn giữa */
+  cursor: pointer;
+}
+
+.checkout-btn:hover {
+  background-color: #218838;  /* Đổi màu nền khi hover */
+}
+

@@ -1,10 +1,19 @@
 <?php
+    session_start();
+
+    if (!isset($_SESSION['user']) || $_SESSION['user']['role'] != 1) {
+        header('Location: /duan1/index.php?act=login');
+        exit;
+    }
+
     include "../model/pdo.php";
     include "../model/danhmuc.php";
     include "../model/sanpham.php";
     include "../model/user.php";
     include "../model/binhluan.php";
     include "../model/thongke.php";
+    include "../model/order.php";
+    include "../model/order_detail.php";
 
     include "header.php";
 
@@ -158,9 +167,22 @@
                 $listthongke=loadall_thongke();
                 include "thongke/list.php";
                 break;
+            
             case 'bieudo':
                 $listthongke=loadall_thongke();
                 include "thongke/bieudo.php";
+                break;
+            
+            case 'donhang':
+                if(isset($_GET['id']) && $_GET['id'] > 0) {
+                    $order_detail = load_order_detail($_GET['id']);
+                    $order = loadone_order($_GET['id']);
+                    include "donhang/detail.php";
+                } else {
+                    $orders = loadall_order();
+                    include "donhang/list.php";
+                }
+
                 break;
 
             default:

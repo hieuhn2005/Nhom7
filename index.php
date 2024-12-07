@@ -6,14 +6,17 @@
     include "model/danhmuc.php";
     include "model/sanpham.php";
     include "model/cart.php";
+    include "model/order.php";
+    include "model/order_detail.php";
     include "global.php";
 
-
     $user_id = isset($_SESSION['user']['id']) ? $_SESSION['user']['id'] : null;
+    $order =  isset($_SESSION['cart']['order']) ? $_SESSION['cart']['order'] : null;
 
-    $spnew=loadall_sanpham_home();
-    $dsdm=loadall_danhmuc();
+    $spnew = loadall_sanpham_home();
+    $dsdm = loadall_danhmuc();
     $cart_items = get_cart($user_id);
+
     $act = isset($_GET['act']) ? $_GET['act'] : '';
 
     if (!in_array($act, ['login', 'register'])) {
@@ -93,7 +96,7 @@
                 if (isset($_POST['login'])) {
                     $username = isset($_POST['username']) ? trim($_POST['username']) : '';
                     $password = isset($_POST['password']) ? $_POST['password'] : '';
-    
+
                     $result = check_login($username, $password);
                     if ($result['success']) {
                         $_SESSION['user'] = $result['user'];
@@ -110,47 +113,47 @@
                 }
                 include "view/login.php";
                 break;
-    
+
             case 'register':
                 if (isset($_POST['register'])) {
                     $email = trim($_POST['email']);
                     $username = trim($_POST['username']);
                     $password = $_POST['password'];
-    
+
                     $result = register_user($email, $username, $password);
                     if ($result['success']) {
                         $success = $result['message'];
                         header('Location: index.php?act=login');
+                        exit;
                     } else {
                         $error = $result['message'];
                     }
                 }
                 include "view/register.php";
                 break;
-    
+
             case 'logout':
                 session_destroy();
                 header('Location: index.php');
-                break;
+                exit;
 
             case 'sanpham':
-                if(isset($_POST['kyw'])&&($_POST['kyw']!="")){
-                    $kyw=$_POST['kyw'];
-                }else{
-                    $kyw="";
+                if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
+                    $kyw = $_POST['kyw'];
+                } else {
+                    $kyw = "";
                 }
-                if(isset($_GET['iddm'])&&($_GET['iddm']>0)){
-                    $iddm=$_GET['iddm'];
-                    
-                }else{
-                    $iddm=0;
-                
+                if (isset($_GET['iddm']) && ($_GET['iddm'] > 0)) {
+                    $iddm = $_GET['iddm'];
+                } else {
+                    $iddm = 0;
                 }
-   
-                $dssp=loadall_sanpham($kyw,$iddm);
-                $tendm=loadten_danhmuc($iddm);
+
+                $dssp = loadall_sanpham($kyw, $iddm);
+                $tendm = loadten_danhmuc($iddm);
                 include "view/sanpham.php";
                 break;
+
             case 'sanphamct':
                 
                 if(isset($_GET['idsp'])&&($_GET['idsp']>0)){
@@ -159,33 +162,69 @@
                     extract($onesp);
                     $sp_cungloai=load_sanpham_cungloai($id,$iddm);
                     include "view/sanphamct.php";
-                }else{
+                } else {
                     include "view/home.php";
                 }
                 break;
-           
-            
+
+            case 'checkout':
+                if(isset($_POST['checkout'])) {
+                    $name = trim($_POST['name']);
+                    $phone = trim($_POST['phone']);
+                    $address = trim($_POST['address']);
+                    if (empty($name) || empty($phone) || empty($address)) {
+                        header("Location: index.php?act=checkout");
+                        exit();
+                    }
+
+                    $total_amount = array_sum(array_column($cart_items, 'total'));
+                    $order_id = create_order($user_id, $name, $total_amount, $address, $phone);
+
+                    foreach ($cart_items as $item) {
+                        create_order_detail($order_id, $item['product_id'], $item['quantity'], $item['price'], $item['total']);
+                    }
+
+                    $_SESSION['cart']['order'] = [
+                        'name' => $name,
+                        'address' =>  $address,
+                        'phone' => $phone,
+                        'total_amount' => $total_amount,
+                        'order_id' => $order_id
+                    ];
+
+                    clear_cart($user_id);
+
+                    header("Location: index.php?act=thankyou");
+                    exit();
+                }
+
+                include "view/checkout.php";
+                break;
+
+            case 'thankyou':
+                unset($_SESSION['cart']['order']);
+                include "view/thankyou.php";
+                break;
+
             case 'tuyendung':
                 include "view/tuyendung.php";
                 break;
-            
+
             case 'gioithieu':
                 include "view/gioithieu.php";
                 break;
-            
+
             case 'lienhe':
                 include "view/lienhe.php";
                 break;
-            
+
             default:
                 include "view/home.php";
                 break;
         }
-    }else{
+    } else {
         include "view/home.php";
     }
 
-    
     include "view/footer.php";
-
 ?>
