@@ -165,6 +165,44 @@ nav ul li a:hover {
  margin-left: 100px;
 }
 
+
+.footer {
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-top: 1px solid #ccc;
+  background-color: rgb(183, 182, 182);
+  position: relative;
+
+}
+.footer h3 {
+  margin: 0 0 10px;
+}
+.footer div {
+  width: 24%;
+  min-width: 200px;
+}
+.footer p {
+  margin: 5px 0;
+}
+.footer a {
+  text-decoration: none;
+  color: #007BFF;
+}
+.footer .app-links img {
+  width: 120px;
+  margin-top: 10px;
+}
+@media (max-width: 600px) {
+  .footer div {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}
+
+
 /* footer {
   background-color: #008000;
   color: #ffffff;
@@ -297,6 +335,7 @@ table{
   padding-top: 20px;
   width: 90%;
   margin: auto;
+  min-height: 1200px;
 }
 .boxtrai{
   float: left;
@@ -308,7 +347,7 @@ table{
   float: left;
   width: 100%;
   min-height: 100px;
-  /* border: 1px solid gray; */
+  border: 1px solid gray;
   margin: 20px 0;
   border-radius: 10px;
 }
@@ -337,7 +376,7 @@ table{
   float: left;
   width: 100%;
   min-height: 300px;
-  /* border: 1px solid gray; */
+  border: 1px solid gray;
   margin: 20px 0;
   border-radius: 10px;
 }
