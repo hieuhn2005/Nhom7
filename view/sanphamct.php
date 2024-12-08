@@ -31,7 +31,7 @@
           <?php
                 foreach ($sp_cungloai as $sp_cungloai) {
                   extract($sp_cungloai);
-                  $linksp="index.php?act=sanphamct&idsp".$id;
+                  $linksp="index.php?act=sanphamct&idsp=".$id;
                   echo '<li><a href="'.$linksp.'">'.$name.'</a></li>';
                 }
             ?>
@@ -51,13 +51,13 @@
             <h1><?=$price?>đ</h1>
           </div><br>
           <div class="tgiohang">
-    <!-- Thêm link vào nút "Thêm vào giỏ hàng" -->
-    <a href="index.php?add_to_cart=<?= $onesp['id'] ?>&quantity=1" class="add-to-cart-link">
-        <button type="button">Thêm vào giỏ hàng</button>
-    </a>
-</div>
+                  <!-- Thêm link vào nút "Thêm vào giỏ hàng" -->
+                  <a href="index.php?add_to_cart=<?= $onesp['id'] ?>&quantity=1" class="add-to-cart-link">
+                      <button type="button">Thêm vào giỏ hàng</button>
+                  </a>
+          </div>
             </div>
         </div>
         
       </div>
-    </div>
+</div> 

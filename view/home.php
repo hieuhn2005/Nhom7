@@ -67,7 +67,7 @@
                                 <a href="'.$linksp.'"><img src="'.$hinh.'" alt="" class="img-pro"></a>
                                 <h3 class="name-pro"><a href="'.$linksp.'">'.$name.'</a></h3>
                                     <div class="trung">
-                                        <p class="price">'.$price.'</p>
+                                        <p class="price">'.$price.'đ</p>
                                         <a href="index.php?add_to_cart='.$sp['id'].'">Thêm vào giỏ</a>
                            </div>
                            </div>';

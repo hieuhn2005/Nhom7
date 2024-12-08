@@ -1,5 +1,30 @@
 <footer>
-
+<div class="footer">
+    <div>
+        <h3>GREENY</h3>
+        <p>Adipiscing asperiores ipsum ipsa repellat consequatur reprehenderit quisquam assumenda dolor perspiciatis sit ipsum dolor amet.</p>
+    </div>
+    <div>
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:support@example.com">support@example.com</a></p>
+        <p>Phone: +120 279 532 13</p>
+        <p>Address: 114-50, 2nd Avenue, NY 90001 United States</p>
+    </div>
+    <div>
+        <h3>Quick Links</h3>
+        <p><a href="#">My Account</a></p>
+        <p><a href="#">Order History</a></p>
+        <p><a href="#">Order Tracking</a></p>
+        <p><a href="#">Best-Seller</a></p>
+        <p><a href="#">New Arrivals</a></p>
+    </div>
+    <div class="app-links">
+        <h3>Download App</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="#"><img src="google-play.png" alt="Google Play"></a>
+        <a href="#"><img src="app-store.png" alt="App Store"></a>
+    </div>
+</div>
     
     </footer>
 

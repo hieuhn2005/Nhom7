@@ -11,7 +11,7 @@
               <th>ID</th>
               <th>USERNAME</th>
               <th>Email</th>
-              <th>Password</th>
+              <!-- <th>Password</th> -->
               <th>Thời gian</th>
               <th>Role</th>
             </tr>
@@ -30,7 +30,7 @@
                               <td>'.$id.'</td>
                               <td>'.$username.'</td>
                               <td>'.$email.'</td>
-                              <td>'.$password.'</td>
+                       
                               <td>'.$created_at.'</td>
                               <td>'.$role.'</td>
                        
