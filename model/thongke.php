@@ -1,4 +1,5 @@
 <?php
+// Lấy dữ liệu thống kê từ bảng
 function loadall_thongke(){
     $sql="select danhmuc.name as madm,danhmuc.name as tendm, count(sanpham.id) as countsp, min(sanpham.price) as minprice, max(sanpham.price) as maxprice, avg(sanpham.price) as avgprice";
     $sql.=" from sanpham left join danhmuc on danhmuc.id=sanpham.iddm";
