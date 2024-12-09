@@ -49,16 +49,16 @@
     }
 
     // Xử lý hiển thị giỏ hàng
-    if (isset($_GET['act']) && $_GET['act'] == 'cart') {
-        if (isset($_SESSION['user'])) {
-            $user_id = $_SESSION['user']['id'];
-            $cart_items = get_cart($user_id);  // Lấy giỏ hàng người dùng
-            include "view/cart.php";  // Giả sử bạn tạo view/cart.php để hiển thị giỏ hàng
-        } else {
-            header("Location: index.php?act=login");
-            exit;
-        }
-    }
+    // if (isset($_GET['act']) && $_GET['act'] == 'cart') {
+    //     if (isset($_SESSION['user'])) {
+    //         $user_id = $_SESSION['user']['id'];
+    //         $cart_items = get_cart($user_id);  // Lấy giỏ hàng người dùng
+    //         include "view/cart.php";  // Giả sử bạn tạo view/cart.php để hiển thị giỏ hàng
+    //     } else {
+    //         header("Location: index.php?act=login");
+    //         exit;
+    //     }
+    // }
 
     // Cập nhật số lượng sản phẩm trong giỏ hàng
     if (isset($_POST['update_cart'])) {
@@ -216,6 +216,9 @@
 
             case 'lienhe':
                 include "view/lienhe.php";
+                break;
+            case 'cart':
+                include "view/cart.php";
                 break;
 
             default:

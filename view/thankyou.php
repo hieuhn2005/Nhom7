@@ -4,7 +4,7 @@ if (!$order) {
     exit;
 }
 ?>
-
+<div class="thanhtoann">
 <div>Cảm ơn bạn đã đặt hàng</div>
 <div>Thôn tin đơn hàng</div>
 <div>ID Đơn hàng: <?= $order['order_id'] ?></div>
@@ -12,3 +12,4 @@ if (!$order) {
 <div>Địa chỉ: <?= $order['address'] ?></div>
 <div>SĐT: <?= $order['phone'] ?></div>
 <div>Tổng tiền: <?= $order['total_amount'] ?></div>
+</div>
