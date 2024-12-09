@@ -226,5 +226,7 @@
         include "view/home.php";
     }
 
-    include "view/footer.php";
+    if (!in_array($act, ['login', 'register'])) {
+        include "view/footer.php";
+     }
 ?>
