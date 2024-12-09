@@ -207,10 +207,17 @@
             case 'cart':
                 include "view/cart.php";
                 break;
-            case 'donhangg':
-                include "view/donhang.php";
-                break;
-
+                case 'donhangg':
+                    if(isset($_GET['id']) && $_GET['id'] > 0) {
+                        $order_detail = load_order_detail($_GET['id']);
+                        $order = loadone_order($_GET['id']);
+                        // include "donhang/detail.php";
+                    } else {
+                        $orders = loadall_order();
+                        include "view/donhang.php";
+                    }
+    
+                    break;
             default:
                 include "view/home.php";
                 break;

@@ -51,6 +51,7 @@ nav ul li a:hover {
   align-items: center; /* Căn giữa theo chiều dọc */
   margin: 20px 0; /* Khoảng cách trên/dưới */
   white-space: nowrap; /* Ngăn không cho nội dung xuống dòng */
+  margin-right: auto; /* Đẩy sang bên trái */
 }
 
 .search input[type="text"] {
