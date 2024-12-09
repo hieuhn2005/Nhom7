@@ -7,15 +7,15 @@
                         <b>Địa chỉ:</b> 196 di trach, phường 3, Quận 5, Hà Nội<br /><br />
                         <b>Telephone:</b> 028 3835 4409<br /><br />
                         <b>Hotline:</b> 097777777 - CSKH: 028 9996 777<br /><br />
-                        <b>Website:</b> <a href="https://github.com/HoangTran0410/DoAn_Web1">Github</a> <br /><br />
+                        <b>Website:</b> <a href="https://github.com/hieuhn2005/Nhom7">Github</a> <br /><br />
                         <b>E-mail:</b> DoAn@gmail.com<br /><br />
                         <b>Mã số thuế:</b> 01 02 03 04 05<br /><br />
                         <b>Tài khoản ngân hàng :</b><br /><br />
                         <b>Số TK:</b> 060008086888 <br /><br />
-                        <b>Tại Ngân hàng:</b> Agribank Chi nhánh Sài Gòn<br /><br /><br /><br />
+                        <b>Tại Ngân hàng:</b> MB bank <br /><br /><br /><br />
                         <b>Quý khách có thể gửi liên hệ tới chúng tôi bằng cách hoàn tất biểu mẫu dưới đây. Chúng tôi
                             sẽ trả lời thư của quý khách, xin vui lòng khai báo đầy đủ. Hân hạnh phục vụ và chân thành
-                            cảm ơn sự quan tâm, đóng góp ý kiến đến Smartphone Store.</b>
+                            cảm ơn sự quan tâm, đóng góp ý kiến đến GRENNY.</b>
                     </p>
                 </div>
                 <div class="info-right">

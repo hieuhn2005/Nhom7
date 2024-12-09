@@ -18,6 +18,7 @@
         <li><a href="index.php?act=gioithieu">Giới thiệu</a></li>
        
         <li><a href="index.php?act=lienhe">Liên hệ</a></li>
+        <li><a href="index.php?act=lienhe">Đơn hàng</a></li>
       </ul>
     </nav>
     <div class="search">

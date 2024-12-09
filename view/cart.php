@@ -30,6 +30,6 @@
 
         <p class="total-amount"><strong>Tổng cộng:</strong> <?= number_format(array_sum(array_column($cart_items, 'total')), 0, ',', '.') ?> VNĐ</p>
 
-        <a href="index.php?act=checkout" class="checkout-btn">Đặt hàng</a>
+        <a href="index.php?act=checkout" class="checkout-btn">Đặt hàng</a><br><br><br>
     </div>
 <?php endif; ?>
