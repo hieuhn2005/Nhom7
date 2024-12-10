@@ -208,15 +208,36 @@
                 include "view/cart.php";
                 break;
                 case 'donhangg':
-                    if(isset($_GET['id']) && $_GET['id'] > 0) {
-                        $order_detail = load_order_detail($_GET['id']);
-                        $order = loadone_order($_GET['id']);
-                        // include "donhang/detail.php";
+                    if (isset($_SESSION['user'])) {
+                        $user_id = $_SESSION['user']['id']; // Lấy ID người dùng từ session
+                
+                        if (isset($_GET['id']) && $_GET['id'] > 0) {
+                            // Tải thông tin chi tiết đơn hàng cho ID đơn hàng cụ thể
+                            $order_id = $_GET['id'];
+                            $order_detail = load_order_detail($order_id);
+                            $order = loadone_order($order_id);
+                
+                            // Kiểm tra nếu đơn hàng thuộc về người dùng hiện tại
+                            if ($order['user_id'] == $user_id) {
+                                // Bao gồm view chi tiết đơn hàng
+                                include "view/donhang_detail.php"; // Đảm bảo file này tồn tại
+                            } else {
+                                // Nếu đơn hàng không thuộc về người dùng, có thể thông báo lỗi hoặc chuyển hướng
+                                header("Location: index.php?act=donhangg");
+                                exit;
+                            }
+                        } else {
+                            // Tải tất cả các đơn hàng của người dùng nếu không có ID cụ thể
+                            $orders = load_orders_by_user($user_id); // Hàm này cần được tạo để lấy đơn hàng theo user_id
+                            
+                            // Bao gồm view danh sách đơn hàng
+                            include "view/donhang.php";
+                        }
                     } else {
-                        $orders = loadall_order();
-                        include "view/donhang.php";
+                        // Nếu chưa đăng nhập, chuyển hướng đến trang đăng nhập
+                        header("Location: index.php?act=login");
+                        exit;
                     }
-    
                     break;
             default:
                 include "view/home.php";
